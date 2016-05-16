@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Cloud_Dokumente "http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#"
+     xml:base="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Cloud_Dokumente="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente">
+        <owl:imports rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehoert_zu_Unternehmen -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Abteilung_gehoert_zu_Unternehmen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Abteilung_hat_Mitarbeiter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsdatum -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Aenderungsdatum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Bundesland_gehoert_zu_Land"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Dokument_gehoert_zu_Projekt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Dokument_hat_Verfasser"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokumenttyp -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Dokumenttyp"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Erstellungsdatum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;ID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde_von_Unternehmen -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Kunde_von_Unternehmen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Mitarbeiter_gehoert_zu_Abteilung"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektleiter_von -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Mitarbeiter_ist_Projektleiter_von"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Mitarbeiter_ist_Projektmitglied_von"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Mitarbeiteranzahl"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Projekt_hat_Projektleiter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Projekt_hat_Projektmitglied"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Projekt_umfasst_Abteilung"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Schlagwort -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Schlagwort"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Speicherort -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Speicherort"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Stadt_gehoert_zu_Bundesland"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Land -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Stadt_gehoert_zu_Land"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Status -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Status"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Unternehmen_hat_Abteilung"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Unternehmen_hat_Hauptsitz_in"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Unternehmen_hat_Mitarbeiter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Unternehmen_hat_Projekt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Version -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Version"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vorname -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Vorname"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen -->
+
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;ist_Mitarbeiter_von_Unternehmen"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Besprechungsprotokoll -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Besprechungsprotokoll"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bestandskunde -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Bestandskunde"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dienstleistungsunternehmen -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Dienstleistungsunternehmen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;IT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Industrieunternehmen -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Industrieunternehmen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Land"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Marketing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterIntern -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;MitarbeiterIntern"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Organisation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Personalwesen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Produktion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Rechnungswesen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Stadt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Versuchsprojekt -->
+
+    <owl:Class rdf:about="&Cloud_Dokumente;Versuchsprojekt"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Abschlussbericht_HighNet_19-01-2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Abschlussbericht_HighNet_19-01-2016">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Abschlussbericht"/>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">19-01-2016</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Abschlussbericht_HighNet_19-01-2016</Cloud_Dokumente:Name>
+        <Cloud_Dokumente:Speicherort rdf:datatype="&xsd;string">https://drive.google.com/open?id=1vJNvuPnCwg37yKZRsRuWvDn_LIwF5N4nHm_Xm1SIn8g12345</Cloud_Dokumente:Speicherort>
+        <Cloud_Dokumente:Dokument_hat_Verfasser rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
+        <Cloud_Dokumente:Dokument_gehoert_zu_Projekt rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Besprechungsprotokoll_HighNet_15-01-2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Besprechungsprotokoll_HighNet_15-01-2016">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Besprechungsprotokoll"/>
+        <Cloud_Dokumente:Version rdf:datatype="&xsd;int">1.2</Cloud_Dokumente:Version>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">15-01-2016</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Aenderungsdatum rdf:datatype="&xsd;dateTime">16-01-2016</Cloud_Dokumente:Aenderungsdatum>
+        <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Aufgabenverteilung</Cloud_Dokumente:Schlagwort>
+        <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Besprechungsprotokoll_HighNet_15-01-2016</Cloud_Dokumente:Name>
+        <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Fertiggestellt</Cloud_Dokumente:Status>
+        <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Ideensammlung</Cloud_Dokumente:Schlagwort>
+        <Cloud_Dokumente:Dokumenttyp rdf:datatype="&xsd;string">Textdokument</Cloud_Dokumente:Dokumenttyp>
+        <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Vorgehensmodell</Cloud_Dokumente:Schlagwort>
+        <Cloud_Dokumente:Speicherort rdf:datatype="&xsd;string">https://drive.google.com/open?id=1vJNvuPnCwg37yKZRsRuWvDn_LIwF5N4nHm_Xm1SIn8g</Cloud_Dokumente:Speicherort>
+        <Cloud_Dokumente:Dokument_gehoert_zu_Projekt rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+        <Cloud_Dokumente:Dokument_hat_Verfasser rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Dienstleistungsunternehmen"/>
+        <Cloud_Dokumente:Mitarbeiteranzahl rdf:datatype="&xsd;int">600</Cloud_Dokumente:Mitarbeiteranzahl>
+        <Cloud_Dokumente:Unternehmen_hat_Projekt rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+        <Cloud_Dokumente:Unternehmen_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier"/>
+        <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Marketing_HighNet"/>
+        <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Organisation_HighNet"/>
+        <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Personalwesen_HighNet"/>
+        <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Rechnungswesen_HighNet"/>
+        <Cloud_Dokumente:Unternehmen_hat_Hauptsitz_in rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Stuttgart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Deutschland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Deutschland">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Land"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Bestandskunde"/>
+        <rdf:type rdf:resource="&Cloud_Dokumente;MitarbeiterIntern"/>
+        <Cloud_Dokumente:ID rdf:datatype="&xsd;int">55678</Cloud_Dokumente:ID>
+        <Cloud_Dokumente:Vorname rdf:datatype="&xsd;string">Haruki</Cloud_Dokumente:Vorname>
+        <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Murakami</Cloud_Dokumente:Name>
+        <Cloud_Dokumente:Kunde_von_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+        <Cloud_Dokumente:Mitarbeiter_gehoert_zu_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars"/>
+        <Cloud_Dokumente:ist_Mitarbeiter_von_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Versuchsprojekt"/>
+        <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Gruen</Cloud_Dokumente:Status>
+        <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Highnet</Cloud_Dokumente:Name>
+        <Cloud_Dokumente:ID rdf:datatype="&xsd;int">P112</Cloud_Dokumente:ID>
+        <Cloud_Dokumente:Projekt_umfasst_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#IT_HighNet"/>
+        <Cloud_Dokumente:Projekt_hat_Projektleiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier"/>
+        <Cloud_Dokumente:Projekt_hat_Projektmitglied rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier"/>
+        <Cloud_Dokumente:Projekt_umfasst_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#IT_HighNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#IT_HighNet">
+        <rdf:type rdf:resource="&Cloud_Dokumente;IT"/>
+        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+        <Cloud_Dokumente:Abteilung_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Japan">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Land"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier">
+        <rdf:type rdf:resource="&Cloud_Dokumente;MitarbeiterIntern"/>
+        <Cloud_Dokumente:ID rdf:datatype="&xsd;string">12345</Cloud_Dokumente:ID>
+        <Cloud_Dokumente:Vorname rdf:datatype="&xsd;string">Lisa</Cloud_Dokumente:Vorname>
+        <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Meier</Cloud_Dokumente:Name>
+        <Cloud_Dokumente:ist_Mitarbeiter_von_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+        <Cloud_Dokumente:Mitarbeiter_ist_Projektleiter_von rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+        <Cloud_Dokumente:Mitarbeiter_ist_Projektmitglied_von rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+        <Cloud_Dokumente:Mitarbeiter_gehoert_zu_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#IT_HighNet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Marketing_HighNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Marketing_HighNet">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Marketing"/>
+        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Organisation_HighNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Organisation_HighNet">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Organisation"/>
+        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Personalwesen_HighNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Personalwesen_HighNet">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Personalwesen"/>
+        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Produktion"/>
+        <Cloud_Dokumente:Abteilung_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
+        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Rechnungswesen_HighNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Rechnungswesen_HighNet">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Rechnungswesen"/>
+        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Industrieunternehmen"/>
+        <Cloud_Dokumente:Unternehmen_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
+        <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars"/>
+        <Cloud_Dokumente:Unternehmen_hat_Hauptsitz_in rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Tokio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Stuttgart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Stuttgart">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Stadt"/>
+        <Cloud_Dokumente:Stadt_gehoert_zu_Land rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Deutschland"/>
+        <Cloud_Dokumente:Stadt_gehoert_zu_Bundesland rdf:resource="&Cloud_Dokumente;Baden-Wuerttemberg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Tokio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Tokio">
+        <rdf:type rdf:resource="&Cloud_Dokumente;Stadt"/>
+        <Cloud_Dokumente:Stadt_gehoert_zu_Land rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Japan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&Cloud_Dokumente;Baden-Wuerttemberg">
+        <Cloud_Dokumente:Bundesland_gehoert_zu_Land rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Deutschland"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
