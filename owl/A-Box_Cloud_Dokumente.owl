@@ -490,6 +490,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars">
         <rdf:type rdf:resource="&Cloud_Dokumente;Industrieunternehmen"/>
+		<Cloud_Dokumente:Unternehmensname rdf:datatype="&xsd;string">Star Cars</Cloud_Dokumente:Unternehmensname>
         <Cloud_Dokumente:Unternehmen_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
         <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars"/>
         <Cloud_Dokumente:Unternehmen_hat_Hauptsitz_in rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Tokio"/>
