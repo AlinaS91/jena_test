@@ -1,0 +1,1268 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#"
+     xml:base="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehoert_zu_Unternehmen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehoert_zu_Unternehmen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert fuer jede Instanz besitzen duerfen 
+Eine Instanz der Klasse Dokument kann nur zu einem Projekt gehoeren.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde_von_Unternehmen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde_von_Unternehmen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert fuer jede Instanz besitzen duerfen 
+Eine Instanz der Klasse Mitarbeiter kann nur zu einer Abteilung gehoeren.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektleiter_von -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektleiter_von">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Inverse Functional (Deklaration von Properties, fuer die verschiedene Instanzen nicht den gleichen Wert besitzen koennen.)
+
+Verschiedene Instanzen der Klasse Mitarbeiter koennen nicht Projektleiter von demselben Projekt sein.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert fuer jede Instanz besitzen duerfen 
+Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Land -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Land">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert fuer jede Instanz besitzen duerfen 
+Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Projekt_von_Unternehmen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Projekt_von_Unternehmen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Verfasser_von_Dokument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Verfasser_von_Dokument">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Inverse Functional (Deklaration von Properties, fuer die verschiedene Instanzen nicht den gleichen Wert besitzen koennen.)
+
+Verschiedene Instanzen der Klasse Person koennen Verfasser von demselben Dokument sein.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsdatum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsdatum">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokumenttyp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokumenttyp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinbezeichnung">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Schlagwort -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Schlagwort">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Speicherort -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Speicherort">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Status">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Version">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vorname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vorname">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Absatz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Absatz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Beschaffung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Einkauf"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Fertigung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abschlussbericht -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abschlussbericht">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abschlussdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Uebergabeprotokoll"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abschlussdokument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abschlussdokument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsantrag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsantrag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aufgabenliste"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Besprechungsprotokoll"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstatusbericht"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#To-Do-Liste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aufgabenliste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aufgabenliste">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#To-Do-Liste"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Besprechungsprotokoll"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstatusbericht"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bauvorhaben -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bauvorhaben">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investitionsprojekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Beschaffung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Beschaffung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Einkauf"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Fertigung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Besprechungsprotokoll -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Besprechungsprotokoll">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstatusbericht"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#To-Do-Liste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bestandskunde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bestandskunde">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Neukunde"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dienstleistungsunternehmen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dienstleistungsunternehmen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Einkauf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Einkauf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Fertigung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Fertigung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Fertigung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Handwerksunternehmen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Handwerksunternehmen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Ausbildungsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Ausbildungsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Infrastrukturprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Infrastrukturprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Organisationsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Organisationsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Strategieprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT-Strategieprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Industrieunternehmen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Industrieunternehmen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investitionsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Investitionsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kapazitaetsplan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kapazitaetsplan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kostenplan"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinplan"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstrukturplan"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kommunikationsplan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kommunikationsplan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektaufbauorganisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kostenplan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kostenplan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinplan"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstrukturplan"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kundenevent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kundenevent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketingprojekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land_und_Forstwirtschaftlichesunternehmen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land_und_Forstwirtschaftlichesunternehmen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Lastenheft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Lastenheft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Pflichtenheft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektkalkulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketingprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Marketingprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Materialwirtschaft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinplan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinplan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstrukturplan"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektleiter_von"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterExtern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterExtern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterIntern"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterIntern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterIntern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#MitarbeiterExtern"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Neukunde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Neukunde">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsdokument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsdokument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Verfasser_von_Dokument"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Personalwesen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Pflichtenheft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Pflichtenheft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektkalkulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktentwicklung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktentwicklung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#F&amp;Entwicklungsprojekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Produktion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektaufbauorganisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektaufbauorganisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektauftrag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektauftrag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektkalkulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektkalkulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Auftragsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstatusbericht -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstatusbericht">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#To-Do-Liste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstrukturplan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projektstrukturplan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Rechnungswesen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Reorganisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Reorganisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Organisationsprojekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Software_Entwicklung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Software_Entwicklung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Land"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Terminplan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Planungsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#To-Do-Liste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#To-Do-Liste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Uebergabeprotokoll -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Uebergabeprotokoll">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abschlussdokument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Versuchsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Versuchsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vertrieb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Wartungsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Wartungsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#IT_Projekt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#F&amp;Entwicklungsprojekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#F&amp;Entwicklungsprojekt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
