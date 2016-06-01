@@ -34,9 +34,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehoert_zu_Unternehmen -->
+    <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehört_zu_Unternehmen -->
 
-    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Abteilung_gehoert_zu_Unternehmen"/>
+    <owl:AnnotationProperty rdf:about="&Cloud_Dokumente;Abteilung_gehört_zu_Unternehmen"/>
     
 
 
@@ -326,6 +326,7 @@
         <rdf:type rdf:resource="&Cloud_Dokumente;Abschlussbericht"/>
         <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">19-01-2016</Cloud_Dokumente:Erstellungsdatum>
         <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Abschlussbericht_HighNet_19-01-2016</Cloud_Dokumente:Name>
+        <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Kostenverteilung</Cloud_Dokumente:Schlagwort>
         <Cloud_Dokumente:Speicherort rdf:datatype="&xsd;string">https://drive.google.com/open?id=1vJNvuPnCwg37yKZRsRuWvDn_LIwF5N4nHm_Xm1SIn8g12345</Cloud_Dokumente:Speicherort>
         <Cloud_Dokumente:Dokument_hat_Verfasser rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
         <Cloud_Dokumente:Dokument_gehoert_zu_Projekt rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
@@ -340,6 +341,7 @@
         <Cloud_Dokumente:Version rdf:datatype="&xsd;int">1.2</Cloud_Dokumente:Version>
         <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">15-01-2016</Cloud_Dokumente:Erstellungsdatum>
         <Cloud_Dokumente:Aenderungsdatum rdf:datatype="&xsd;dateTime">16-01-2016</Cloud_Dokumente:Aenderungsdatum>
+        <Cloud_Dokumente:DriveDocumentID rdf:datatype="&xsd;string">1K4_pQgxm9dEx4HK5s5ghw740hkcOu8IrbpMFZ4RNuX0</Cloud_Dokumente:DriveDocumentID>
         <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Aufgabenverteilung</Cloud_Dokumente:Schlagwort>
         <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Besprechungsprotokoll_HighNet_15-01-2016</Cloud_Dokumente:Name>
         <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Fertiggestellt</Cloud_Dokumente:Status>
@@ -396,7 +398,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Versuchsprojekt"/>
-        <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Gruen</Cloud_Dokumente:Status>
+        <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Grün</Cloud_Dokumente:Status>
         <Cloud_Dokumente:Name rdf:datatype="&xsd;string">Highnet</Cloud_Dokumente:Name>
         <Cloud_Dokumente:ID rdf:datatype="&xsd;int">P112</Cloud_Dokumente:ID>
         <Cloud_Dokumente:Projekt_umfasst_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#IT_HighNet"/>
@@ -411,7 +413,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#IT_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;IT"/>
-        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
+        <Cloud_Dokumente:Abteilung_gehört_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#HighNet"/>
         <Cloud_Dokumente:Abteilung_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Lisa_Maier"/>
     </owl:NamedIndividual>
     
@@ -444,7 +446,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Marketing_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Marketing"/>
-        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+        <Cloud_Dokumente:Abteilung_gehört_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
     </owl:NamedIndividual>
     
 
@@ -453,7 +455,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Organisation_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Organisation"/>
-        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+        <Cloud_Dokumente:Abteilung_gehört_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
     </owl:NamedIndividual>
     
 
@@ -462,7 +464,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Personalwesen_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Personalwesen"/>
-        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+        <Cloud_Dokumente:Abteilung_gehört_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
     </owl:NamedIndividual>
     
 
@@ -472,7 +474,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars">
         <rdf:type rdf:resource="&Cloud_Dokumente;Produktion"/>
         <Cloud_Dokumente:Abteilung_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
-        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars"/>
+        <Cloud_Dokumente:Abteilung_gehört_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars"/>
     </owl:NamedIndividual>
     
 
@@ -481,7 +483,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Rechnungswesen_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Rechnungswesen"/>
-        <Cloud_Dokumente:Abteilung_gehoert_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
+        <Cloud_Dokumente:Abteilung_gehört_zu_Unternehmen rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Broken_Bits"/>
     </owl:NamedIndividual>
     
 
@@ -490,7 +492,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Star_Cars">
         <rdf:type rdf:resource="&Cloud_Dokumente;Industrieunternehmen"/>
-		<Cloud_Dokumente:Unternehmensname rdf:datatype="&xsd;string">Star Cars</Cloud_Dokumente:Unternehmensname>
         <Cloud_Dokumente:Unternehmen_hat_Mitarbeiter rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Haruki_Murakami"/>
         <Cloud_Dokumente:Unternehmen_hat_Abteilung rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Produktion_Star_Cars"/>
         <Cloud_Dokumente:Unternehmen_hat_Hauptsitz_in rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Tokio"/>
@@ -503,7 +504,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Stuttgart">
         <rdf:type rdf:resource="&Cloud_Dokumente;Stadt"/>
         <Cloud_Dokumente:Stadt_gehoert_zu_Land rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Deutschland"/>
-        <Cloud_Dokumente:Stadt_gehoert_zu_Bundesland rdf:resource="&Cloud_Dokumente;Baden-Wuerttemberg"/>
+        <Cloud_Dokumente:Stadt_gehoert_zu_Bundesland rdf:resource="&Cloud_Dokumente;Baden-Württemberg"/>
     </owl:NamedIndividual>
     
 
@@ -525,7 +526,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="&Cloud_Dokumente;Baden-Wuerttemberg">
+    <rdf:Description rdf:about="&Cloud_Dokumente;Baden-Württemberg">
         <Cloud_Dokumente:Bundesland_gehoert_zu_Land rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/A-BOX_Cloud_Dokumente#Deutschland"/>
     </rdf:Description>
 </rdf:RDF>
