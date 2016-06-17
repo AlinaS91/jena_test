@@ -1,18 +1,9 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <rdf:RDF xmlns="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#"
      xml:base="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente"/>
@@ -33,9 +24,9 @@
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehoert_zu_Unternehmen -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_gehoert_zu_Unternehmen">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
     </owl:ObjectProperty>
     
 
@@ -43,9 +34,9 @@
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung"/>
     </owl:ObjectProperty>
     
 
@@ -53,7 +44,7 @@
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
     </owl:ObjectProperty>
@@ -63,11 +54,11 @@
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
-Eine Instanz der Klasse Dokument kann nur zu einem Projekt gehören.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
+Eine Instanz der Klasse Dokument kann nur zu einem Projekt gehören.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -75,6 +66,7 @@ Eine Instanz der Klasse Dokument kann nur zu einem Projekt gehören.</rdfs:comme
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Verfasser_von_Dokument"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
     </owl:ObjectProperty>
@@ -93,11 +85,11 @@ Eine Instanz der Klasse Dokument kann nur zu einem Projekt gehören.</rdfs:comme
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
-Eine Instanz der Klasse Mitarbeiter kann nur zu einer Abteilung gehören.</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
+Eine Instanz der Klasse Mitarbeiter kann nur zu einer Abteilung gehören.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -105,13 +97,13 @@ Eine Instanz der Klasse Mitarbeiter kann nur zu einer Abteilung gehören.</rdfs:
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektleiter_von -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektleiter_von">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Inverse Functional (Deklaration von Properties, für die verschiedene Instanzen nicht den gleichen Wert besitzen können.)
-
-Verschiedene Instanzen der Klasse Mitarbeiter können nicht Projektleiter von demselben Projekt sein.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inverse Functional (Deklaration von Properties, für die verschiedene Instanzen nicht den gleichen Wert besitzen können.)
+
+Verschiedene Instanzen der Klasse Mitarbeiter können nicht Projektleiter von demselben Projekt sein.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -119,9 +111,9 @@ Verschiedene Instanzen der Klasse Mitarbeiter können nicht Projektleiter von de
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
     </owl:ObjectProperty>
     
 
@@ -129,11 +121,11 @@ Verschiedene Instanzen der Klasse Mitarbeiter können nicht Projektleiter von de
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
-Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
+Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -141,8 +133,8 @@ Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektmitglied">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
     </owl:ObjectProperty>
     
 
@@ -150,8 +142,8 @@ Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
     </owl:ObjectProperty>
     
 
@@ -159,9 +151,9 @@ Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
     </owl:ObjectProperty>
     
 
@@ -169,8 +161,8 @@ Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Land -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Land">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
     </owl:ObjectProperty>
     
 
@@ -178,7 +170,7 @@ Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
         <rdfs:range>
             <owl:Restriction>
@@ -193,12 +185,12 @@ Eine Instanz der Klasse Projekt kann nur einen Projektleiter haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
-Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional: Deklaration von Properties, die maximal einen Wert für jede Instanz besitzen dürfen 
+Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -206,8 +198,9 @@ Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
     </owl:ObjectProperty>
     
 
@@ -215,8 +208,9 @@ Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Projekt_von_Unternehmen"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
     </owl:ObjectProperty>
     
 
@@ -224,8 +218,8 @@ Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Standort_in">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
     </owl:ObjectProperty>
     
 
@@ -235,7 +229,6 @@ Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:commen
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter"/>
     </owl:ObjectProperty>
     
 
@@ -245,7 +238,6 @@ Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:commen
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Projekt_von_Unternehmen">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt"/>
     </owl:ObjectProperty>
     
 
@@ -253,13 +245,12 @@ Eine Instanz der Klasse Unternehmen kann nur einen Hauptsitz haben.</rdfs:commen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Verfasser_von_Dokument -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Verfasser_von_Dokument">
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Inverse Functional (Deklaration von Properties, für die verschiedene Instanzen nicht den gleichen Wert besitzen können.)
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inverse Functional (Deklaration von Properties, für die verschiedene Instanzen nicht den gleichen Wert besitzen können.)
 
 Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokument sein.</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
     </owl:ObjectProperty>
     
 
@@ -275,11 +266,29 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     
 
 
+    <!-- http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#DokumentenID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#DokumentenID"/>
+    
+
+
+    <!-- http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#ProjektID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#ProjektID"/>
+    
+
+
+    <!-- http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Unternehmensname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Unternehmensname"/>
+    
+
+
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsdatum -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Aenderungsdatum">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -287,9 +296,9 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokumenttyp -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokumenttyp">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -303,9 +312,9 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -313,10 +322,8 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -325,7 +332,7 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Meilensteinbezeichnung">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Steuerungsdokument"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -333,9 +340,9 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -343,8 +350,8 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name">
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -353,7 +360,7 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Schlagwort">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -362,7 +369,7 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Speicherort">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -370,10 +377,10 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Status -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Status">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -381,9 +388,8 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Version -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Version">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -392,7 +398,7 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Vorname">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -453,14 +459,7 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
 
     <!-- http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung_hat_Mitarbeiter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
     
 
 
@@ -551,8 +550,8 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland_gehoert_zu_Land"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Land"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -572,30 +571,30 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_gehoert_zu_Projekt"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Dokument_hat_Verfasser"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#DokumentenID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Erstellungsdatum"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;int"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -865,18 +864,6 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Person"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Kunde"/>
             </owl:Class>
@@ -889,8 +876,20 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_ist_Projektmitglied_von"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ist_Mitarbeiter_von_Unternehmen"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter_gehoert_zu_Abteilung"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1035,22 +1034,22 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_umfasst_Abteilung"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#ID"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt_hat_Projektleiter"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#ProjektID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1137,8 +1136,8 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt_gehoert_zu_Bundesland"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Bundesland"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1191,8 +1190,20 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
     <owl:Class rdf:about="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Mitarbeiter"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1203,35 +1214,23 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Abteilung"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Abteilung"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Name"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Hauptsitz_in"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Stadt"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Unternehmen_hat_Projekt"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Projekt"/>
+                <owl:onProperty rdf:resource="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Unternehmensname"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alinasiebert/ontologies/2016/0/Cloud_Dokumente#Mitarbeiteranzahl"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1271,5 +1270,5 @@ Verschiedene Instanzen der Klasse Person können Verfasser von demselben Dokumen
 
 
 
-<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
 
