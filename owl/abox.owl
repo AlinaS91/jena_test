@@ -865,7 +865,7 @@
     <owl:NamedIndividual rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Abschlussbericht_HighNet_19-01-2016">
         <rdf:type rdf:resource="&Cloud_Dokumente;Abschlussbericht"/>
         <Cloud_Dokumente:Version rdf:datatype="&xsd;double">1.2</Cloud_Dokumente:Version>
-        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">19-01-2016</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">2016-01-19T05:11</Cloud_Dokumente:Erstellungsdatum>
         <Dokumentenname rdf:datatype="&xsd;string">Abschlussbericht_HighNet_19-01-2016</Dokumentenname>
         <DokumentenID rdf:datatype="&xsd;string">D0001</DokumentenID>
         <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Fertiggestellt</Cloud_Dokumente:Status>
@@ -936,8 +936,8 @@
         <rdf:type rdf:resource="&Cloud_Dokumente;Besprechungsprotokoll"/>
         <Cloud_Dokumente:Version rdf:datatype="&xsd;double">1.0</Cloud_Dokumente:Version>
         <Cloud_Dokumente:Version rdf:datatype="&xsd;double">1.2</Cloud_Dokumente:Version>
-        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">15-01-2016</Cloud_Dokumente:Erstellungsdatum>
-        <Cloud_Dokumente:Aenderungsdatum rdf:datatype="&xsd;dateTime">16-01-2016</Cloud_Dokumente:Aenderungsdatum>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">2007-08-31T16:47</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Aenderungsdatum rdf:datatype="&xsd;dateTime">2007-09-31T16:40</Cloud_Dokumente:Aenderungsdatum>
         <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Aufgabenverteilung</Cloud_Dokumente:Schlagwort>
         <Dokumentenname rdf:datatype="&xsd;string">Besprechungsprotokoll_HighNet_15-01-2016</Dokumentenname>
         <DokumentenID rdf:datatype="&xsd;string">D0002</DokumentenID>
@@ -1162,9 +1162,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Kostenplan_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Kostenplan"/>
-        <Cloud_Dokumente:Aenderungsdatum rdf:datatype="&xsd;dateTime">02-02-2016</Cloud_Dokumente:Aenderungsdatum>
+        <Cloud_Dokumente:Aenderungsdatum rdf:datatype="&xsd;dateTime">2016-02-02T17:00</Cloud_Dokumente:Aenderungsdatum>
         <Cloud_Dokumente:Version rdf:datatype="&xsd;string">2.0</Cloud_Dokumente:Version>
-        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">25-01-2016</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">2016-01-25T15:00</Cloud_Dokumente:Erstellungsdatum>
         <DokumentenID rdf:datatype="&xsd;string">D0005</DokumentenID>
         <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Fertiggestellt</Cloud_Dokumente:Status>
         <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">HighNet</Cloud_Dokumente:Schlagwort>
@@ -1395,7 +1395,7 @@
     <owl:NamedIndividual rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Projektauftrag_AWG">
         <rdf:type rdf:resource="&Cloud_Dokumente;Projektauftrag"/>
         <Cloud_Dokumente:Version rdf:datatype="&xsd;double">1.0</Cloud_Dokumente:Version>
-        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">10-04-2016</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">2016-04-10T16:47</Cloud_Dokumente:Erstellungsdatum>
         <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Auftrag</Cloud_Dokumente:Schlagwort>
         <DokumentenID rdf:datatype="&xsd;string">D0004</DokumentenID>
         <Cloud_Dokumente:Status rdf:datatype="&xsd;string">Fertiggestellt</Cloud_Dokumente:Status>
@@ -1414,7 +1414,7 @@
     <owl:NamedIndividual rdf:about="http://www.documentrepresentation.org/ontologies/Cloud_Dokumente#Projektauftrag_HighNet">
         <rdf:type rdf:resource="&Cloud_Dokumente;Projektauftrag"/>
         <Cloud_Dokumente:Version rdf:datatype="&xsd;double">1.0</Cloud_Dokumente:Version>
-        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">15-01-2016</Cloud_Dokumente:Erstellungsdatum>
+        <Cloud_Dokumente:Erstellungsdatum rdf:datatype="&xsd;dateTime">2016-01-15T10:47</Cloud_Dokumente:Erstellungsdatum>
         <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Anforderungen</Cloud_Dokumente:Schlagwort>
         <Cloud_Dokumente:Schlagwort rdf:datatype="&xsd;string">Auftrag</Cloud_Dokumente:Schlagwort>
         <DokumentenID rdf:datatype="&xsd;string">D0003</DokumentenID>
